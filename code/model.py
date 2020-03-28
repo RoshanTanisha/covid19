@@ -13,6 +13,9 @@ class UNetClassifier:
         self.output_classes = num_classes
         self.save_history = save_logs
 
+        self._create_model()
+        self._compile_model()
+
     def _create_cnn_block(self, input_tensor, num_filters, max_pool=True):
         output_tensor = Conv2D(filters=num_filters, kernel_size=(3,3), kernel_initializer='he_normal')(input_tensor)
         output_tensor = Conv2D(filters=num_filters, kernel_size=(3,3), kernel_initializer='he_normal')(output_tensor)
@@ -26,7 +29,7 @@ class UNetClassifier:
         if self.output_classes == 2:
             output_tensor = Dense(1, activation='sigmoid')(output_tensor)
         else:
-            output_tensor = Dense(self.output_classes, activation='softmax')
+            output_tensor = Dense(self.output_classes, activation='softmax')(output_tensor)
 
         return output_tensor
 
