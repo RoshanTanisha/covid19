@@ -45,7 +45,7 @@ class UNetClassifier:
     def _compile_model(self):
         self.opt = Adam(lr=3e-5)
         if self.output_classes == 2:
-            loss = 'log_loss'
+            loss = 'binary_crossentropy'
         else:
             loss = 'categorical_crossentropy'
         self.model.compile(optimizer=self.opt, loss=loss, metrics=['acc'])
