@@ -1,2 +1,8 @@
 # covid19
-Classification based on limited dataset available of 5 classes including covid19 based on CT Scan dataset.
+Classification of whether the x-ray is infected by COVID19 or not, based on 136 COVID19 XRay images, and 100 Normal XRay images.
+
+---
+
+Following is the result on 188 train images and 48 validation images
+
+![PLt.png](Plt.png)
