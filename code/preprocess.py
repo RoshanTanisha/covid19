@@ -18,7 +18,7 @@ def apply_n4itk(image):
 
     corrector = sitk.N4BiasFieldCorrectionImageFilter()
 
-    # number_fitting_levels = 4
+    # number_fitting_levels=4
 
     # corrector.SetMaximumNumberOfIterations(number_fitting_levels)
 
