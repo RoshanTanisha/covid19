@@ -6,7 +6,7 @@ import pandas as pd
 import os, sys, math, csv, datetime, pickle, time, json
 
 
-class UNetClassifier:
+class Classifier:
     def __init__(self, input_image_size, num_classes, save_logs):
         self.number_kernels = [64, 128, 256, 512, 1024]
         self.input_tensor = Input(shape=input_image_size)
