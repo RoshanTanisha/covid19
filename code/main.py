@@ -19,7 +19,7 @@ def load_dataset(covid_file_path, normal_file_path):
     return all_images, all_labels
 
 if __name__ == '__main__':
-    model = UNetClassifier((512, 512, 1), 2, True)
+    model = Classifier((512, 512, 1), 2, True)
         
     all_images, all_labels = load_dataset()
 
